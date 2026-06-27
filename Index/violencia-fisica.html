@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segurança • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Segurança física</p>
+            <h2>Violência física</h2>
+            <p>Receba orientações objetivas sobre proteção, acolhimento e medidas urgentes.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Atenção</p>
+          <p>Se houver risco imediato, busque ajuda imediata com serviços oficiais, vizinhos ou alguém de confiança.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Medidas de proteção</h3>
+            <ul>
+              <li>Guarde documentos importantes em local seguro</li>
+              <li>Planeje um caminho de saída</li>
+              <li>Tenha contatos de apoio disponíveis</li>
+              <li>Use os canais de emergência do projeto</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Quando buscar ajuda</h3>
+            <ul>
+              <li>Em caso de ameaça atual</li>
+              <li>Se houver lesões ou risco repetido</li>
+              <li>Quando a segurança estiver comprometida</li>
+              <li>Se houver medo constante de violência</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('fisica');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

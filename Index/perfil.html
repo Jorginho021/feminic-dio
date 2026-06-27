@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Perfil</p>
+            <h2>Minha conta</h2>
+            <p>Acompanhe as configurações e o estado da sua sessão.</p>
+          </div>
+          <button id="logout-btn" class="btn btn-secondary" type="button">Sair</button>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Conta</p>
+          <h3 id="profile-name">Usuária</h3>
+          <p>Sessão protegida, identidade registrada e acesso reservado.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('perfil');
+    window.ProtegeCM.renderFooter();
+    document.getElementById('profile-name').textContent = window.ProtegeCM.getAuthenticatedUser();
+    document.getElementById('logout-btn').addEventListener('click', () => window.ProtegeCM.logout());
+  </script>
+</body>
+</html>

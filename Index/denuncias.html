@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denúncias • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Canal de apoio</p>
+            <h2>Registrar denúncia</h2>
+            <p>Envie sua denúncia com clareza, segurança e orientação.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Privacidade</p>
+          <p>Este ambiente organiza a informação de forma segura e respeitosa. Em um ambiente com backend, os dados seriam armazenados com controle de acesso e criptografia.</p>
+        </div>
+        <form id="denuncia-form" class="form-card" novalidate>
+          <div class="field-group">
+            <label for="denuncia-ocorreu">O que aconteceu</label>
+            <textarea id="denuncia-ocorreu" placeholder="Descreva o ocorrido" required></textarea>
+          </div>
+          <div class="field-group">
+            <label for="denuncia-onde">Onde aconteceu</label>
+            <input id="denuncia-onde" type="text" placeholder="Local da ocorrência" required />
+          </div>
+          <div class="field-group">
+            <label for="denuncia-quem">Quem está envolvido</label>
+            <input id="denuncia-quem" type="text" placeholder="Pessoa(s) envolvidas" required />
+          </div>
+          <div class="field-group">
+            <label for="denuncia-tempo">Há quanto tempo</label>
+            <input id="denuncia-tempo" type="text" placeholder="Há quanto tempo vem ocorrendo" required />
+          </div>
+          <div class="field-group">
+            <label for="denuncia-arquivo">Adicionar arquivo (opcional)</label>
+            <input id="denuncia-arquivo" type="file" accept="image/*,.pdf,audio/*" />
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar denúncia</button>
+          <div id="denuncia-feedback" class="feedback-region"></div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    const ANONYMOUS_MODE_KEY = 'northstar-anonymous';
+    const isAnonymous = sessionStorage.getItem(ANONYMOUS_MODE_KEY) === 'true';
+
+    if (!isAnonymous) {
+      sessionStorage.setItem(ANONYMOUS_MODE_KEY, 'true');
+    }
+
+    window.ProtegeCM.renderSidebar('denuncias');
+    window.ProtegeCM.renderFooter();
+
+    document.getElementById('denuncia-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const fields = ['denuncia-ocorreu', 'denuncia-onde', 'denuncia-quem', 'denuncia-tempo'];
+      const isComplete = fields.every(id => document.getElementById(id).value.trim());
+      if (!isComplete) {
+        window.ProtegeCM.showAlert('denuncia-feedback', 'Preencha todos os campos principais antes de enviar.', 'error');
+        return;
+      }
+      window.ProtegeCM.showAlert('denuncia-feedback', 'Recebemos sua denúncia. Apenas a equipe autorizada terá acesso.', 'success');
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>

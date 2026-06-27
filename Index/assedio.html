@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assédio • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Orientação</p>
+            <h2>Assédio</h2>
+            <p>Conhecer as formas de assédio ajuda na prevenção, no registro e na busca por apoio.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Resumo</p>
+          <p>O assédio pode acontecer presencialmente, digitalmente ou em ambientes de trabalho e estudo. Documentar e buscar apoio é fundamental.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Formas comuns</h3>
+            <ul>
+              <li>Insultos e comentários ofensivos</li>
+              <li>Pressão persistente e invasão de privacidade</li>
+              <li>Assédio virtual e compartilhamento indevido</li>
+              <li>Intimidação em ambientes coletivos</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Próximos passos</h3>
+            <ul>
+              <li>Guarde provas e registros</li>
+              <li>Reporte o ocorrido a uma autoridade</li>
+              <li>Procure apoio emocional e jurídico</li>
+              <li>Use o canal de denúncias do projeto</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('assedio');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

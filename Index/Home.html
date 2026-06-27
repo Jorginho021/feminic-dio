@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Painel seguro</p>
+            <h2>Bem-vinda, <span id="user-name">visitante</span></h2>
+            <p>Seu centro de apoio, orientação e ação rápida para o dia a dia.</p>
+          </div>
+          <div class="button-group compact">
+            <button id="logout-btn" class="btn btn-secondary" type="button">Sair</button>
+            <a class="btn btn-primary" href="denuncias.html">Registrar denúncia</a>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <article class="hero-card">
+            <p class="eyebrow">Resumo</p>
+            <h3>Você está em um ambiente preparado para acolher e orientar com segurança.</h3>
+            <p>Explore conteúdos, ative o canal de emergência e encontre caminhos claros para agir com confiança.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="emergencia.html">Abrir emergência</a>
+              <a class="btn btn-secondary" href="relacionamentos-abusivos.html">Ver recursos</a>
+            </div>
+          </article>
+          <aside class="hero-card accent">
+            <p class="eyebrow">Atendimento</p>
+            <h3>Resposta rápida e profissional</h3>
+            <p>Todos os canais foram organizados para oferecer apoio imediato e linguagem clara.</p>
+          </aside>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span class="meta">Recursos</span>
+            <div class="value">8</div>
+            <p>Guias prontos para leitura</p>
+          </div>
+          <div class="stat-card">
+            <span class="meta">Segurança</span>
+            <div class="value">100%</div>
+            <p>Proteção de sessão</p>
+          </div>
+          <div class="stat-card">
+            <span class="meta">Acesso</span>
+            <div class="value">24/7</div>
+            <p>Disponível sempre</p>
+          </div>
+          <div class="stat-card">
+            <span class="meta">Suporte</span>
+            <div class="value">3x</div>
+            <p>Canais de apoio</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="meta">Relacionamentos</p>
+            <h3>Reconhecer sinais</h3>
+            <p>Entenda padrões de controle, agressão e isolamento com informações claras e acolhedoras.</p>
+            <a class="text-link" href="relacionamentos-abusivos.html">Abrir guia</a>
+          </article>
+          <article class="card">
+            <p class="meta">Saúde emocional</p>
+            <h3>Orientações práticas</h3>
+            <p>Descubra caminhos para cuidar do seu bem-estar e fortalecer sua segurança emocional.</p>
+            <a class="text-link" href="violencia-psicologica.html">Abrir guia</a>
+          </article>
+          <article class="card">
+            <p class="meta">Denúncias</p>
+            <h3>Registro seguro</h3>
+            <p>Organize sua denúncia com clareza e acesso a orientações antes de qualquer decisão.</p>
+            <a class="text-link" href="denuncias.html">Abrir guia</a>
+          </article>
+          <article class="card">
+            <p class="meta">Emergência</p>
+            <h3>Resposta imediata</h3>
+            <p>Encontre contatos e passos de ação rápida quando a situação exige atenção urgente.</p>
+            <a class="text-link" href="emergencia.html">Abrir guia</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    const auth = window.ProtegeCM;
+    auth.requireAuth('login.html');
+    auth.renderSidebar('home');
+    auth.renderFooter();
+    document.getElementById('user-name').textContent = auth.getAuthenticatedUser();
+    document.getElementById('logout-btn').addEventListener('click', () => auth.logout());
+  </script>
+</body>
+</html>

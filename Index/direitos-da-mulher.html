@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Direitos • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Direitos</p>
+            <h2>Direitos da mulher</h2>
+            <p>Conhecer seus direitos fortalece sua capacidade de agir e se proteger.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Informação</p>
+          <p>O acesso a informação jurídica e social é uma ferramenta essencial para proteção e autonomia.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Áreas de proteção</h3>
+            <ul>
+              <li>Proteção contra violência</li>
+              <li>Acesso a assistência social</li>
+              <li>Direitos de saúde e segurança</li>
+              <li>Amparo jurídico e psicológico</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Onde buscar apoio</h3>
+            <ul>
+              <li>Centros de atendimento especializados</li>
+              <li>Serviços públicos e ONGs</li>
+              <li>Delegacias especializadas</li>
+              <li>Profissionais da saúde e da educação</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('direitos');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

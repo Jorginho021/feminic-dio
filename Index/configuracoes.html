@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurações • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Configurações</p>
+            <h2>Preferências de segurança</h2>
+            <p>Organize o ambiente para uma experiência mais confortável e protegida.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="form-card">
+          <div class="field-group">
+            <label for="pref-privacy">🔒 Modo de privacidade</label>
+            <select id="pref-privacy">
+              <option>Alta</option>
+              <option>Padrão</option>
+              <option>Baixa</option>
+            </select>
+            <span class="helper-text">Define o nível de proteção de dados da sua sessão.</span>
+          </div>
+          <div class="field-group">
+            <label for="pref-notify">🔔 Notificações</label>
+            <select id="pref-notify">
+              <option>Ativadas</option>
+              <option>Somente essenciais</option>
+            </select>
+            <span class="helper-text">Controle quais notificações você deseja receber.</span>
+          </div>
+          <button class="btn btn-primary btn-full" type="button" onclick="window.ProtegeCM.showToast('Preferências salvas com sucesso.', 'success')">✓ Salvar preferências</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('configuracoes');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

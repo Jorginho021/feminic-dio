@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saúde emocional • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Saúde emocional</p>
+            <h2>Violência psicológica</h2>
+            <p>Proteger a mente e a autoestima é parte essencial da segurança.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Contexto</p>
+          <p>A violência psicológica pode se manifestar por meio de humilhações, manipulação, chantagem, isolamento e medo contínuo.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Como identificar</h3>
+            <ul>
+              <li>Sentimento constante de culpa</li>
+              <li>Medo de discordar ou se expressar</li>
+              <li>Controle sobre pensamentos e decisões</li>
+              <li>Minimização de seus sentimentos</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Rede de apoio</h3>
+            <ul>
+              <li>Amigos e familiares confiáveis</li>
+              <li>Profissionais de saúde mental</li>
+              <li>Serviços de acolhimento</li>
+              <li>Centros de atendimento especializados</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('psicologica');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

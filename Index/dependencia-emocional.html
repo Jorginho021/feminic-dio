@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apoio • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Apoio emocional</p>
+            <h2>Dependência emocional</h2>
+            <p>Aprender a reconhecer padrões de dependência é um passo importante para recuperar autonomia.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Visão</p>
+          <p>Dependência emocional pode envolver necessidade constante de aprovação, medo de abandono, dificuldade de tomar decisões e perda de autonomia.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Indicadores</h3>
+            <ul>
+              <li>Necessidade excessiva de validação</li>
+              <li>Medo intenso de ser deixada</li>
+              <li>Dificuldade para dizer não</li>
+              <li>Perda de confiança em si</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Fortalecimento</h3>
+            <ul>
+              <li>Estabeleça limites claros</li>
+              <li>Reforce sua rede de apoio</li>
+              <li>Busque orientação profissional</li>
+              <li>Cuidar da autoestima e da segurança</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('dependencia');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

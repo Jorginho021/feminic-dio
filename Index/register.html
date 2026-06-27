@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar conta • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-hero" aria-label="Visão geral da plataforma">
+      <div class="brand-block">
+        <div class="brand-mark">N</div>
+        <div>
+          <p class="eyebrow">Northstar Safe</p>
+          <h1>Crie sua conta com segurança e rapidez.</h1>
+        </div>
+      </div>
+      <p>Seu espaço para acessar informações, planos de ação e conexões de apoio em um ambiente refinado e protegido.</p>
+      <ul class="benefits-list">
+        <li>Validação em tempo real dos dados.</li>
+        <li>Senhas protegidas e sessão exclusiva.</li>
+        <li>Experiência pensada para ser simples e elegante.</li>
+      </ul>
+    </section>
+
+    <section class="auth-card" aria-labelledby="register-title">
+      <div class="auth-card-header">
+        <div>
+          <p class="eyebrow">Cadastro</p>
+          <h2 id="register-title">Criar conta</h2>
+        </div>
+        <a class="text-link" href="login.html">Voltar ao login</a>
+      </div>
+      <div id="register-feedback" class="feedback-region" aria-live="polite"></div>
+      <form id="register-form" novalidate>
+        <div class="field-group">
+          <label for="register-name">Nome social ou apelido</label>
+          <input id="register-name" name="name" type="text" required placeholder="Como deseja ser chamada" />
+        </div>
+        <div class="field-group">
+          <label for="register-login">RA ou e-mail escolar</label>
+          <input id="register-login" name="login" type="text" required placeholder="Digite seu usuário" />
+        </div>
+        <div class="field-group">
+          <label for="register-password">Senha</label>
+          <input id="register-password" name="password" type="password" required placeholder="Crie uma senha forte" />
+        </div>
+        <div class="field-group">
+          <label for="register-confirm">Confirmar senha</label>
+          <input id="register-confirm" name="confirm" type="password" required placeholder="Repita a senha" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="register-submit">Criar conta</button>
+      </form>
+      <p class="helper-text">Ao continuar, você concorda com o tratamento responsável dos seus dados neste ambiente.</p>
+    </section>
+  </main>
+  <script src="../scripts/shared.js"></script>
+  <script src="../scripts/register.js"></script>
+</body>
+</html>

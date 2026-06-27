@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergência • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Resposta imediata</p>
+            <h2>Emergência agora</h2>
+            <p>Use os recursos abaixo para agir com rapidez e segurança.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Atenção</p>
+          <p>Se houver risco iminente, priorize o contato com os serviços oficiais ou alguém de confiança.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Chamar 190</h3>
+            <p>Atendimento policial para situações urgentes e de risco imediato.</p>
+            <a class="btn btn-danger btn-full" href="tel:190">🚨 Ligar para 190</a>
+          </article>
+          <article class="card">
+            <h3>Enviar SMS</h3>
+            <p>Prepare uma mensagem de socorro no aplicativo padrão do celular.</p>
+            <button class="btn btn-primary" type="button" onclick="window.ProtegeCM.prepareSms()">Abrir SMS</button>
+          </article>
+        </div>
+        <div class="form-card">
+          <button class="btn btn-primary btn-full" type="button" onclick="window.ProtegeCM.requestLocation('location-output')">📍 Obter localização</button>
+          <p id="location-output" class="helper-text"></p>
+        </div>
+        <div class="card">
+          <h3>Telefones úteis</h3>
+          <ul>
+            <li>190 – Polícia Militar</li>
+            <li>180 – Disque denúncia de violência contra a mulher</li>
+            <li>Delegacia da Mulher – atendimento especializado</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    const ANONYMOUS_MODE_KEY = 'northstar-anonymous';
+    const isAnonymous = sessionStorage.getItem(ANONYMOUS_MODE_KEY) === 'true';
+
+    if (!isAnonymous) {
+      window.ProtegeCM.requireAuth('login.html');
+    }
+
+    window.ProtegeCM.renderSidebar('emergencia');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

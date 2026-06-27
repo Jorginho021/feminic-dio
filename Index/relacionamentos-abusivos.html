@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relações • Northstar Safe</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/page.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div id="sidebar"></div>
+    <main class="main-panel">
+      <section class="section">
+        <div class="section-title">
+          <div class="headline">
+            <p class="eyebrow">Orientação</p>
+            <h2>Relacionamentos abusivos</h2>
+            <p>Reconhecer sinais de controle, pressão e violência é o primeiro passo para agir com segurança.</p>
+          </div>
+          <a href="Home.html" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="hero-card">
+          <p class="eyebrow">Resumo</p>
+          <p>Um relacionamento abusivo pode começar de forma sutil e evoluir para um padrão de controle, medo e isolamento. O reconhecimento precoce é essencial.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Sinais de alerta</h3>
+            <ul>
+              <li>Ciúmes excessivo e controle constante</li>
+              <li>Humilhações e críticas frequentes</li>
+              <li>Isolamento de amigos e família</li>
+              <li>Ameaças ou agressões físicas</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>O que fazer</h3>
+            <ul>
+              <li>Procure apoio de alguém de confiança</li>
+              <li>Registre fatos e mensagens importantes</li>
+              <li>Planeje uma saída segura</li>
+              <li>Busque ajuda profissional ou oficial</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="footer"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../scripts/shared.js"></script>
+  <script>
+    window.ProtegeCM.requireAuth('login.html');
+    window.ProtegeCM.renderSidebar('relacionamentos');
+    window.ProtegeCM.renderFooter();
+  </script>
+</body>
+</html>

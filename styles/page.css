@@ -1,0 +1,10 @@
+﻿/* Estilos específicos para páginas de conteúdo */
+.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.tab { flex: 0 0 auto; padding: 10px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text-muted); font-weight: 600; }
+.tab.active { background: linear-gradient(135deg, var(--primary), var(--primary-strong)); color: white; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.topic-full { display: grid; gap: 12px; }
+.topic-full h3 { margin: 0; }
+.topic-full ul, .topic-full ol { color: var(--text-muted); padding-left: 18px; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; color: #93c5fd; font-weight: 600; }
